@@ -155,4 +155,12 @@ Pod::Spec.new do |s|
     ss.ios.frameworks = 'UIKit'
   end
 
+  s.subspec 'WatchConnectivity' do |ss|
+    ss.source_files = 'Categories/WatchConnectivity/*'
+    ss.dependency 'PromiseKit/CorePromise'
+    ss.frameworks = 'WatchConnectivity'
+    ss.ios.deployment_target = '9.0'
+    ss.watchos.deployment_target = '2.0'
+  end
+
 end
